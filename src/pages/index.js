@@ -2,10 +2,8 @@ import React from 'react';
 import { Link } from 'gatsby';
 import Helmet from 'react-helmet';
 import { Header } from '../components/Header';
-import { Intro } from '../components/Intro';
 import { Work } from '../components/Work';
 import { Contact } from '../components/Contact';
-import { About } from '../components/About';
 import classNames from 'classnames';
 
 import '../styles/main.css';
@@ -79,17 +77,14 @@ export default class Index extends React.Component {
     			<div id="wrapper">
             <Header class={this.state.header} transitionHandler={(name) => this.startArticleTransition(name)}/>
     					<div id={mainId} className={mainClass}>
-                <Intro class={this.state.modal.intro} endTransitionHandler={(name) => this.endArticleTransition(name)} />
                 <Work class={this.state.modal.work} endTransitionHandler={(name) => this.endArticleTransition(name)} />
-                <About class={this.state.modal.about} endTransitionHandler={(name) => this.endArticleTransition(name)} />
                 <Contact class={this.state.modal.contact} endTransitionHandler={(name) => this.endArticleTransition(name)} />
               </div>
     					<footer id={footerId} className={footerClass}>
-    						<p className="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+    						<p><a href="https://pixabay.com/en/clifton-suspension-bridge-bridge-2496334/">Image source</a></p>
     					</footer>
     			</div>
     			<div id="bg"></div>
-
       </div>
     );
   }
